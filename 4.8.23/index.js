@@ -12,6 +12,9 @@ const path = require('path');
 let allData =[];
 //------------------------------------------------
 
+
+
+
 app.get("/",(req,res)=>{
 res.send("hello");});
 app.get("/List",(req,res)=>{
