@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .searchBox {
+            direction: rtl;
+            margin: 0px auto;
+            width: 25%;
+            height: 40px;
+            text-align: center;
+            border-radius: 25px;
+            border: black 2px solid;
+        }
+        .input {
+            margin: 0px auto;
+            text-align: left;
+            border: none;
+            margin-top: 1px;
+            width: 70%;
+            height: 90%;
+            outline: none;
+        }
+        #btn {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: aqua;
+        }
+        .add {
+            text-decoration: none;
+            color: red;
+            font-size: x-large;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body style="font-size: x-large">
+<center>
+    <a class="add" href="4.8.23.html">מעבר אל טבלת הנתונים</a>
+    <br /><br />
+    <form action="/Add" method="post">
+        <div class="searchBox">
+          <span
+          ><input class="input" name="Name" type="text" placeholder="הוסף שם..."
+          /></span>
+        </div>
+        <div class="searchBox">
+          <span
+          ><input
+                  class="input"
+                  name="Phone"
+                  type="tel"
+                  placeholder="הוסף מס טלפון..."
+          /></span>
+        </div>
+        <br>
+        <div class="searchBox">
+          <span
+          ><input class="input" name="Name2" type="text" placeholder="הוסף שם שני אם קיים..."
+          /></span>
+        </div>
+        <div class="searchBox">
+          <span
+          ><input
+                  class="input"
+                  name="Phone2"
+                  type="tel"
+                  placeholder="הוסף מס טלפון שני אם קיים..."
+          /></span>
+        </div>
+        <br>
+        <div class="searchBox">
+          <span
+          ><input
+                  class="input"
+                  name="Pobox"
+                  type="tel"
+                  placeholder="הוסף תא דואר..."
+          /></span>
+        </div>
+        <br />
+        <button id="btn" onclick="" type="submit">שלח</button>
+    </form>
+    <a href="http://localhost:5858/List">List</a>
+
+    <a href="http://localhost:5858/Table">Table</a>
+
+</center>
+</body>
+</html>
