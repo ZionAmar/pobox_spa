@@ -16,7 +16,9 @@ let allData =[];
 
 
 app.get("/",(req,res)=>{
-res.send("hello");});
+res.sendFile("./main.html",{root:__dirname});});
+app.get("/Table",(req,res)=>{
+    res.sendFile("./index.html",{root:__dirname});});
 app.get("/List",(req,res)=>{
     res.send(allData).json();
 });
@@ -26,6 +28,13 @@ app.post("/Add",(req,res)=>{
     line.phone = req.body.Phone;
     line.pobox = req.body.Pobox;
     allData.push(line);
+    let line2 ={};
+    line2.name = req.body.Name2;
+    line2.phone = req.body.Phone2;
+    line2.pobox = req.body.Pobox;
+    if(line2.name && line2.phone!==""){
+        allData.push(line2);
+    }
     res.send("Ready to Add EndPoint");
 });
 //------------------------------------------------
